@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "0254593e-b23d-4c44-b68c-0795f2d46e84",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000",
+    "url": "localhost:3000",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-31T06:08:53.093Z",
+    "modified": "2022-10-31T06:33:48.213Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "image",
+          "value": "../../../../../../Pictures/Screenshot from 2022-08-16 15-43-28.png"
+        }
+      ]
+    },
+    "tests": []
+  }
+]
