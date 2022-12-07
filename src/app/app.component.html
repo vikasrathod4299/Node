@@ -13,11 +13,14 @@
       <label for="standerd">Standerd</label>
       <input formControlName="standerd" id="'standerd" type="text">
     </div>
-    <button type="submit">Submit</button>
+    <div>
+      <button *ngIf="id=='';" type="button" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+      <button *ngIf="id!='';" type="button" (click)="onUpdate()" class="btn btn-warning">Update</button>
+    </div>
   </form>
 
   <div>
-    <app-student-list></app-student-list>
+    <app-student-list (stdValue)="updateStd($event)"></app-student-list>
   </div>
 
 </div>

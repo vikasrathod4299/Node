@@ -19,10 +19,12 @@ export class StudentService {
     this.studentList.splice(index,1)
     return id
   }
-  updateStudent(id:string){
-    let index = this.studentList.findIndex((item)=> id==item.id)
-    this.studentList.splice(index,1)
-    return id
+  updateStudent(id:string,data:any){
+    console.log('helo');
+    let std = this.studentList.find((item)=> id==item.id)
+    std.id=data.id
+    std.name=data.name
+    std.standerd=data.standerd
   }
   
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -9,10 +9,14 @@ import { StudentService } from '../student.service';
 })
 export class StudentComponent implements OnInit {
   @Input() std:any;
-
+  @Output() values=new EventEmitter<any>();
   constructor(public student:StudentService) { }
 
   ngOnInit(): void {
+  }
+
+  updateValue(){
+    this.values.emit(this.std)
   }
 
 }

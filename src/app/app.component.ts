@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { stdInter } from 'src/studentInterface';
 import { StudentService } from './student.service';
 
 @Component({
@@ -15,11 +14,19 @@ export class AppComponent {
     name: new FormControl('',Validators.required),
     standerd: new FormControl('',Validators.required),
   })
-
+  id:string=''
   constructor(public student:StudentService){}
 
   onSubmit(){
     return this.student.addStudent(this.stdForm.value)
+  }
+  updateStd(data:any){
+      this.id=data.id
+      this.stdForm.patchValue(data)
+  }
+  onUpdate(){
+    this.student.updateStudent(this.id,this.stdForm.value)
+    this.id=''
   }
 
 }
